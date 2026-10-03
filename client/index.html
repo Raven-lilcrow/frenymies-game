@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frenymies (online test)</title>
+    <style>
+      html, body { margin: 0; height: 100%; background: #1f2229; color: #e9e9e9; font-family: 'Segoe UI', Inter, system-ui, sans-serif; }
+      #game { width: 100%; height: 100%; }
+      #join { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+      #join form { display: flex; flex-direction: column; gap: 12px; width: 280px; }
+      #join h1 { margin: 0 0 8px; font-size: 28px; font-weight: 700; }
+      #join p { margin: 0 0 8px; color: #8b93a3; font-size: 14px; line-height: 1.4; }
+      #join label { font-size: 13px; color: #8b93a3; display: flex; flex-direction: column; gap: 4px; }
+      #join input { font: inherit; font-size: 16px; padding: 8px 10px; border: 1px solid #3a3f4b; border-radius: 6px; background: #262a33; color: #e9e9e9; }
+      #join button { font: inherit; font-size: 16px; font-weight: 600; padding: 10px; border: 0; border-radius: 6px; background: #f2b134; color: #1f2229; cursor: pointer; }
+      #join .err { color: #ff7a6b; font-size: 14px; min-height: 1.2em; }
+    </style>
+  </head>
+  <body>
+    <div id="join">
+      <form>
+        <h1>Frenymies</h1>
+        <p>Online movement test. Open more tabs with the same room code to add players.</p>
+        <label>Your name <input name="name" maxlength="16" autocomplete="off" required /></label>
+        <label>Room code <input name="room" maxlength="4" autocomplete="off" required /></label>
+        <button type="submit">Join</button>
+        <div class="err"></div>
+      </form>
+    </div>
+    <div id="game"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

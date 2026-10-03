@@ -1,0 +1,8 @@
+# Upload only what the game page needs to build (Vercel builds it on their side).
+/*
+!/client
+!/packages
+!/package.json
+!/package-lock.json
+!/vercel.json
+/client/dist

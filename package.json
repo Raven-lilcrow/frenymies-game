@@ -1,0 +1,28 @@
+{
+  "name": "frenymies",
+  "private": true,
+  "type": "module",
+  "description": "Frenymies online game: shared rules (packages/shared), game server (server), browser client (client)",
+  "scripts": {
+    "server": "node --watch server/src/index.ts",
+    "client": "vite client --port 5190 --strictPort",
+    "bots": "node tools/bots.ts",
+    "build": "vite build client",
+    "build:web": "vite build client --mode vercel",
+    "build:server": "vite build --config server/vite.config.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "phaser": "^4.2.1",
+    "ws": "^8.22.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@types/ws": "^8.18.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3"
+  }
+}

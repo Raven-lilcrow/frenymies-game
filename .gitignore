@@ -1,0 +1,31 @@
+# Installs and build output
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Secrets and per-machine settings (never commit these)
+.env
+.env.*
+!.env.*.example
+.vercel/
+*.pem
+*.key
+*.local.*
+
+# Private: server setup and deploy scripts (domain, VPS address, other services on the box). Laptop only.
+deploy/
+tools/deploy.ps1
+tools/check-live.ts
+
+# Private: planning files. The public copy is docs/GAME-PLAN.md, made by tools/public-plan.ts
+/GAME-PLAN.md
+*.xlsx
+tools/tracker_answers.json
+tools/build_tracker.py
+
+# Editor and OS clutter
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+*.log
